@@ -7,28 +7,21 @@
     <title>11</title>
 
     <script>
-        var a = 0;
+        var entre = 0;
+        var fora = 0;
 
-        var b = 0;
-        
-        var inicial = 0;
-        
-        while(inicial < 10){
-        var text = parseInt(prompt("Insira o valor"));
+        for (var i = 1; i <= 10; i++) {
+            var num = parseInt(prompt("Digite o " + i + "°" + " valor."));
 
-        if(text > 24 && text < 42){
+            if (num > 24 || num < 42) {
+                entre++;
+            } else {
+                fora++;
+            }
 
-        a++
         }
 
-        else{
-
-        b++
-        }
-
-        inicial++
-        }
-        alert(" De todos os valores inseridos " + d + " estão dentro de 24 a 42. " + f + " estão fora. ");
+        document.write("Os valores entre 24 e 42 foram: " + entre + "<br>" + "E os que estão de fora são: " + fora);
 
         
     </script>
